@@ -718,7 +718,21 @@ function mostrarArticulo(idArticulo){
         $('#fechaRegistroArticuloE').val(arti.fechaRegistro);
         $('#oficioArticuloE').val(arti.oficioEntra);
         // Actualizar el campo de selección de marca
-        $('#marcaArticuloE').html('<option value="' + arti.marca + '">' + arti.marca + '</option>');
+        /* mandar a llamar a los catalogos de marcas
+        iterar el resultado con un for
+        llenar el html a inyectar
+        const marcas = cargarmarcas() -> DEBERIA SER UN ARRAY DE TODAS LAS MARCAS QUE CONSULTES EN LA TABLA
+        let marcasHTML = ""
+        for( let marca of marcas){
+          if( marca.id == arti.id){
+            marcasHTML += '<option value="' + arti.id + '" selected>' + arti.marca + '</option>' -> para poner seleccionada la marca que tiene el registro
+          } else{
+            marcasHTML += '<option value="' + arti.id + '">' + arti.marca + '</option>'
+          }
+        }
+        $('#marcaArticuloE').html(marcasHTML);
+        hacer lo mismo con los demás catálogos 
+        */
 
         // Actualizar el campo de selección de material
         $('#materialArticuloE').html('<option value="' + arti.material + '">' + arti.material + '</option>');
